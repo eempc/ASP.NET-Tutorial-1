@@ -21,9 +21,8 @@ namespace WebApplication1 {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("name")
-            
-            ); //AppDbContext is a class .cs file that needs to be generated (ctrl + .)
+            // Database Step 1: Add this line then create the AppDbContext.cs file
+            services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("name")); //AppDbContext is a class .cs file that needs to be generated (ctrl + .)
             services.AddMvc();
         }
 

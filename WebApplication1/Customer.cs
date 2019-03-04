@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+//Database Step 3: this class has no constructor
+
 namespace WebApplication1 {
     public class Customer {
         // No constructor required

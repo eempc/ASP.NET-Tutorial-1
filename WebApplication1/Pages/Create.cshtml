@@ -1,0 +1,16 @@
+﻿@page
+@model WebApplication1.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Database Step 4 - create this razor page in Pages. It will also generate a cs file
+  ViewData will need to be filled in above. it might have stuff required below pertaining to scripts
+  This is essentially the front end and the cs file is the backend
+  -->
+
+<h2>Create</h2>
+
+@section Scripts {
+  @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
