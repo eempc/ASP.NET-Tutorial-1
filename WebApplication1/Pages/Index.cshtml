@@ -7,8 +7,30 @@
 <!-- traditional <HEAD> and <BODY> is not used here, those are found in _layout
   What actually happens is you have a header, footer and/or menu in _layout
   Then you load in the RenderBody() section with content. i.e. the index, the contact, about pages, etc-->
+<!-- Step 6 - this index page was repurposed as the display records page -->
 
+<form method="post">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var customer in Model.Customers) {
+      <tr>
+        <td>@customer.Id</td>
+        <td>@customer.Name</td>
+        <td>LINK TO EDIT, DELETE BUTTON</td>
+      </tr>
+    }
 
+  </tbody>
+</table>
+</form>
+
+<!--
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -111,3 +133,4 @@
         </ul>
     </div>
 </div>
+-->
