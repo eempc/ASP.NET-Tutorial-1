@@ -14,14 +14,11 @@ namespace WebApplication1.Pages
     {
         //These are required in every .cs file. Can't I stick it into the PageModel inherited class?
         private readonly AppDbContext _db; // The database
-
-        // Constructor
-        public EditModel (AppDbContext db) {
-            _db = db;
-        } 
        
+        public EditModel (AppDbContext db) { _db = db; } // Constructor
+
         [BindProperty]
-        public Customer Customer { get; set; } // Customer class
+        public Customer Customer { get; set; } // Customer class needed for writing
 
         // Instructions method to go to Edit page
         public async Task<IActionResult> OnGetAsync (int id) {
@@ -32,7 +29,7 @@ namespace WebApplication1.Pages
             return Page();
         }
 
-        // Edit the name of the customer, submit button
+        // Edit the name of the customer, submit button. The "Post" is important
         public async Task<IActionResult> OnPostAsync() {
             if (!ModelState.IsValid) {               
                 return Page();
