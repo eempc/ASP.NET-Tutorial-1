@@ -20,6 +20,7 @@ namespace WebApplication1.Pages {
 
         public IList<Customer> Customers { get; private set; }
 
+        // Temp message
         [TempData]
         public string Message { get; set; }
 
