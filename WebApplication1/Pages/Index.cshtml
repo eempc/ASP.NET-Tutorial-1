@@ -7,7 +7,7 @@
 <!-- traditional <HEAD> and <BODY> is not used here, those are found in _layout
   What actually happens is you have a header, footer and/or menu in _layout
   Then you load in the RenderBody() section with content. i.e. the index, the contact, about pages, etc-->
-<!-- Step 6 - this index page was repurposed as the display records page -->
+<!-- Step 6 - this index page was repurposed as the display records page and also the delete record-->
 
 <form method="post">
 <table class="table">
@@ -22,12 +22,16 @@
       <tr>
         <td>@customer.Id</td>
         <td>@customer.Name</td>
-        <td>LINK TO EDIT, DELETE BUTTON</td>
+        <td>
+          <a asp-page="./Edit" asp-route-id="@customer.Id">Edit</a>
+          <button type="submit" asp-page-handler="delete" asp-route-id="@customer.Id">Delete</button>
+        </td>
       </tr>
     }
 
   </tbody>
 </table>
+<a asp-page="./Create">Create</a>
 </form>
 
 <!--
